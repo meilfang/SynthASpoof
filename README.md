@@ -9,6 +9,21 @@ The image samples in SynthASpoof are shown:
 
 ![grafik](figures/SynPAD_samples.png)
 
+
+## Data preparation
+SynthASpoof dataset: the images should be preprocessed including face detection and crop via **data_preprocess/crop_face.py** before training.
+Test real datasets: for testing, we use four real face PAD dataset, MSU-MFSD, CASIA-FAS, Idiap ReplayAttack, and OULU-NPU.
+The data format in the real face PAD datasets are videos. We sample 25 frames in the average time interval of each video.  
+
+Then, CSV files are generated for each dataset for further training and evaluation. The format of the dataset CSV file is:
+```
+image_path,label
+/image_dir/image_file_1.png, bonafide
+/image_dir/image_file_2.png, bonafide
+/image_dir/image_file_3.png, attack
+/image_dir/image_file_4.png, attack
+```
+
 ## Training
 Example of training:
 ```
@@ -26,10 +41,10 @@ python train.py \
 where test_data.csv contains image path and the corresponding label (bonafide or attack).
 
 ## Models
-The model trained on CAISA-WebFace and the training set of SMDD can be download via [google driver](https://drive.google.com/file/d/1kFLp1dWp_sBwC-l-RTVo-LRitKSYxbyv/view?usp=sharing).
-More information and small test can be found in test.py. Please make sure give the correct model path.
+The models trained on SynthASpoof with MixStyle can be downloaded via [driver](https://owncloud.fraunhofer.de/index.php/s/HnXCtonG0vwfH11).
 
-if you use SPL-MAD in this repository, please cite the following paper:
+if you use model with MixStyle dataset, please cite the corresponding paper.
+if you use SynthASpoof dataset in this repository, please cite the following paper:
 ```
 @inproceedings{splmad,
   author    = {Meiling Fang and
@@ -42,18 +57,6 @@ if you use SPL-MAD in this repository, please cite the following paper:
   year      = {2022}
 }
 ```
-if you use SMDD dataset, please cite the following paper:
-```
-@article{SMDD,
-    author    = {Damer, Naser and L\'opez, C\'esar Augusto Fontanillo and Fang, Meiling and Spiller, No\'emie and Pham, Minh Vu and Boutros, Fadi},
-    title     = {Privacy-Friendly Synthetic Data for the Development of Face Morphing Attack Detectors},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-    month     = {June},
-    year      = {2022},
-    pages     = {1606-1617}
-}
-```
-
 
 ## License
 The dataset, the implementation, or trained models, use is restricted to research purpuses. The use of the dataset or the implementation/trained models for product development or product competetions (incl. NIST FRVT MORPH) is not allowed. This project is licensed under the terms of the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. Copyright (c) 2020 Fraunhofer Institute for Computer Graphics Research IGD Darmstadt.
