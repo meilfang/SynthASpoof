@@ -12,8 +12,9 @@ The image samples in SynthASpoof are shown:
 
 ## Data preparation
 SynthASpoof dataset: the images should be preprocessed including face detection and crop via **data_preprocess/crop_face.py** before training.
+
 Test real datasets: for testing, we use four real face PAD dataset, MSU-MFSD, CASIA-FAS, Idiap ReplayAttack, and OULU-NPU.
-The data format in the real face PAD datasets are videos. We sample 25 frames in the average time interval of each video.  
+The data format in the real face PAD datasets are videos. We sampled 25 frames in the average time interval of each video.  
 
 Then, CSV files are generated for each dataset for further training and evaluation. The format of the dataset CSV file is:
 ```
@@ -28,34 +29,26 @@ image_path,label
 Example of training:
 ```
 python train.py \
-  --train_csv 'training_data.csv' \
+  --csv_1 'SynthASpoof_data.csv' \
+  --csv_2  'RealPAD_data.csv' 
 ```
-where training_data.csv contains image path.
+The loss is computed based on csv_1. csv_2 is used for style transfer.
+
 ## Testing
 Example of testing:
 ```
 python train.py \
   --test_csv 'test_data.csv' \
-  --model_path 'casia_smdd.pth'
+  --model_path 'model.pth'
 ```
 where test_data.csv contains image path and the corresponding label (bonafide or attack).
 
 ## Models
 The models trained on SynthASpoof with MixStyle can be downloaded via [owncloud](https://owncloud.fraunhofer.de/index.php/s/HnXCtonG0vwfH11).
 
-if you use model with MixStyle dataset, please cite the corresponding paper.
+
 if you use SynthASpoof dataset in this repository, please cite the following paper:
 ```
-@inproceedings{splmad,
-  author    = {Meiling Fang and
-              Fadi Boutros and
-              Naser Damer},
-  title     = {Unsupervised Face Morphing Attack Detection via Self-paced Anomaly Detection},
-  booktitle = {{IJCB}},
-  pages     = {1--8},
-  publisher = {{IEEE}},
-  year      = {2022}
-}
 ```
 
 ## License

@@ -154,8 +154,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='SynPAD Training with MixStyle')
     parser.add_argument("--prefix", default='SynFacePAD', type=str, help="log description")
     parser.add_argument("--model_name", default='resnet18', type=str, help="model backbone")
-    parser.add_argument("--train_csv_1", default='synthetic data csv', type=str, help="csv contains training data")
-    parser.add_argument("--train_csv_2", default='real data csv', type=str, help="csv contains training data")
+    parser.add_argument("--csv_1", default='synthetic data csv', type=str, help="csv contains training data")
+    parser.add_argument("--csv_2", default='real data csv', type=str, help="csv contains training data")
 
     parser.add_argument("--lr", default=0.001, type=float, help="initial learning rate")
     parser.add_argument("--input_shape", default=(224, 224), type=tuple, help="Neural Network input shape")
@@ -164,17 +164,17 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    test_csv = args.train_csv_2  #this real data is used to obtain real image style (without label) to synthetic and also used for testing
+    test_csv = args.csv_2  #this real data is used to obtain real image style (without label) to synthetic and also used for testing
 
     logging_filename = os.path.join('logs/MixStyle',  '{}.txt'.format(args.prefix))
     if not os.path.isdir('logs/MixStyle'):
         os.makedirs('logs/MixStyle')
     log_file = open(logging_filename, 'a')
-    log_file.write(f"Real PAD data: {args.train_csv_2} \n model_name: {args.model_name} pretrained, lr: {args.lr}, prefix: {args.prefix}, bs: {args.batch_size} \n")
+    log_file.write(f"Real PAD data: {args.csv_2} \n model_name: {args.model_name} pretrained, lr: {args.lr}, prefix: {args.prefix}, bs: {args.batch_size} \n")
     log_file.flush()
 
-    main(train_csv_1=args.train_csv_1,  # synthetic data
-         train_csv_2=args.train_csv_2,  # real data
+    main(train_csv_1=args.csv_1,  # synthetic data
+         train_csv_2=args.csv_2,  # real data
          test_csv=test_csv,
          log_file=log_file,
          args=args)
