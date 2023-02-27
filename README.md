@@ -7,7 +7,7 @@ This is the official repository of the work: .
 The SynthASpoof is the synthetic-based face presentation attack detection datasets, including synthetic-generated 25,000 bona fide images and 78,800 corresponding attacks collected by presenting the printed/replayed images to capture cameras (one mobile phone, two different tablets, and one webcam).
 The image samples in SynthASpoof are shown:
 
-![grafik](figures/SynPAD_samples.pdf)
+![grafik](figures/SynPAD_samples.png)
 
 ## Training
 Example of training:
@@ -56,4 +56,4 @@ if you use SMDD dataset, please cite the following paper:
 
 
 ## License
-The implementation or trained models use is restricted to research purpuses. The use of the implementation/trained models for product development or product competetions (incl. NIST FRVT MORPH) is not allowed. This project is licensed under the terms of the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. Copyright (c) 2020 Fraunhofer Institute for Computer Graphics Research IGD Darmstadt.
+The dataset, the implementation, or trained models, use is restricted to research purpuses. The use of the dataset or the implementation/trained models for product development or product competetions (incl. NIST FRVT MORPH) is not allowed. This project is licensed under the terms of the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. Copyright (c) 2020 Fraunhofer Institute for Computer Graphics Research IGD Darmstadt.
