@@ -4,7 +4,7 @@
 This is the official repository of the work: .
 
 ## SynthASpoof dataset
-The SynthASpoof is the synthetic-based face presentation attack detection datasets, including synthetic-generated 25,000 bona fide images and 78,800 corresponding attacks collected by presenting the printed/replayed images to capture cameras (one mobile phone, two different tablets, and one webcam).
+The SynthASpoof is the synthetic-based face presentation attack detection datasets, including synthetic-generated 25,000 bona fide images and 78,800 corresponding attacks collected by presenting the printed/replayed images to capture cameras (one mobile phone, two different tablets, and one webcam). The dataset can be downloaded via [owncloud](https://owncloud.fraunhofer.de/index.php/s/rDnDSrf7Zwg08gW).
 The image samples in SynthASpoof are shown:
 
 ![grafik](figures/SynPAD_samples.png)
@@ -41,7 +41,7 @@ python train.py \
 where test_data.csv contains image path and the corresponding label (bonafide or attack).
 
 ## Models
-The models trained on SynthASpoof with MixStyle can be downloaded via [driver](https://owncloud.fraunhofer.de/index.php/s/HnXCtonG0vwfH11).
+The models trained on SynthASpoof with MixStyle can be downloaded via [owncloud](https://owncloud.fraunhofer.de/index.php/s/HnXCtonG0vwfH11).
 
 if you use model with MixStyle dataset, please cite the corresponding paper.
 if you use SynthASpoof dataset in this repository, please cite the following paper:
