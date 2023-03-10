@@ -1,7 +1,8 @@
 # SynthASpoof
 ---
 ## Note
-This is the official repository of the work: SynthASpoof: Developing Face Presentation Attack Detection Based on Privacy-friendly Synthetic Data ([link])(https://arxiv.org/abs/2303.02660)
+This is the official repository of the work: SynthASpoof: Developing Face Presentation Attack Detection Based on Privacy-friendly Synthetic Data 
+([link](https://arxiv.org/abs/2303.02660))
 
 ## SynthASpoof dataset
 The SynthASpoof is the synthetic-based face presentation attack detection datasets, including synthetic-generated 25,000 bona fide images and 78,800 corresponding attacks collected by presenting the printed/replayed images to capture cameras (one mobile phone, two different tablets, and one webcam). The dataset can be downloaded via [owncloud](https://owncloud.fraunhofer.de/index.php/s/rDnDSrf7Zwg08gW).
