@@ -29,7 +29,7 @@ def main(test_csv, args):
     AUC, HTER = test_model(model, test_loader)
     print('AUC, HTER:', AUC, HTER)
 
-def test_epoch(model, data_loader, video_format=True):
+def test_model(model, data_loader, video_format=True):
     model.eval()
 
     raw_test_scores, gt_labels = [], []
