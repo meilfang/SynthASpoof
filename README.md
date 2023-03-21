@@ -1,14 +1,18 @@
 # SynthASpoof
 ---
 ## Note
-This is the official repository of the work: .
+This is the official repository of the work: SynthASpoof: Developing Face Presentation Attack Detection Based on Privacy-friendly Synthetic Data 
+([link](https://arxiv.org/abs/2303.02660))
 
 ## SynthASpoof dataset
-The SynthASpoof is the synthetic-based face presentation attack detection datasets, including synthetic-generated 25,000 bona fide images and 78,800 corresponding attacks collected by presenting the printed/replayed images to capture cameras (one mobile phone, two different tablets, and one webcam). The dataset can be downloaded via [owncloud](https://owncloud.fraunhofer.de/index.php/s/rDnDSrf7Zwg08gW).
-The image samples in SynthASpoof are shown:
+The SynthASpoof is the synthetic-based face presentation attack detection datasets, including synthetic-generated 25,000 bona fide images and 78,800 corresponding attacks collected by presenting the printed/replayed images to capture cameras (one mobile phone, two different tablets, and one webcam). 
 
+The dataset can be downloaded via [Google Drive](https://drive.google.com/file/d/12s7V6wcY1F-BNlKA1aIVVulz-vj8lcoB/view?usp=share_link) (please share your name, affiliation, and official email in the request form).
+
+The image samples in SynthASpoof are shown:
 ![grafik](figures/SynPAD_samples.png)
 
+NOTE: Please note that the SynthASpoof data aims at being a development (training) data for face PAD. All the evalution are conducted on the authentic data to real-world scenarios.
 
 ## Data preparation
 SynthASpoof dataset: the images should be preprocessed including face detection and crop via **data_preprocess/crop_face.py** before training.
@@ -49,6 +53,15 @@ The models trained on SynthASpoof with MixStyle can be downloaded via [owncloud]
 
 if you use SynthASpoof dataset in this repository, please cite the following paper:
 ```
+@misc{synthaspoof,
+  doi = {10.48550/ARXIV.2303.02660},
+  url = {https://arxiv.org/abs/2303.02660},
+  author = {Fang, Meiling and Huber, Marco and Damer, Naser},
+  title = {SynthASpoof: Developing Face Presentation Attack Detection Based on Privacy-friendly Synthetic Data},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+}
 ```
 
 ## License
